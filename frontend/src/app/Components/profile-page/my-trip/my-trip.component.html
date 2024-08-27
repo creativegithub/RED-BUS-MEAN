@@ -1,0 +1,77 @@
+<div class="singleTrip" *ngFor="let booking of booking">
+  <div class="singleTrip_image">
+    <img [src]="randomimage" alt="Bus" loading="lazy" />
+  </div>
+  <div style="display: flex; justify-content: space-evenly">
+    <div class="singleTrip_busdetails">
+      <div class="heading" style="font-weight: 600; font-size: large">
+        Bus Details
+      </div>
+
+      <!-- Insertion for Departure, Arrival details and Fare -->
+
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">radio_button_checked</span>
+        <span> Departure Location: {{ booking.departureDetails.city }}</span>
+      </p>
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">radio_button_checked</span>
+        <span>Departure Time: {{ booking.departureDetails.time }}:00 hrs</span>
+      </p>
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">radio_button_checked</span>
+        <span> Departure Date: {{ booking.departureDetails.date }}</span>
+      </p>
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">radio_button_checked</span>
+        <span> Arrival Location: {{ booking.arrivalDetails.city }}</span>
+      </p>
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">radio_button_checked</span>
+        <span>Arrival Time: {{ booking.arrivalDetails.time }}:00 hrs</span>
+      </p>
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">radio_button_checked</span>
+        <span>Arrival Date: {{ booking.arrivalDetails.date }}</span>
+      </p>
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">radio_button_checked</span>
+        <span>Total Fare: {{ booking.fare }}</span>
+      </p>
+    </div>
+
+    <div class="singleTrip_personaldetails">
+      <div class="heading" style="font-weight: 600; font-size: large">
+        Passenger Details
+      </div>
+
+      <!-- Insertion for Passenger Details -->
+
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">arrow_right_alt</span>
+        <span> Contact Email: {{ booking.email }}</span>
+      </p>
+      <p class="departure-arrival-fare-details">
+        <span class="material-icons">arrow_right_alt</span>
+        <span>Contact Phone Number: {{ booking.phoneNumber }}</span>
+      </p>
+
+      <div class="singleTrip_customerDetails_passenger">
+        <div *ngFor="let passenger of booking.passengerDetails">
+          <p class="departure-arrival-fare-details">
+            <span class="material-icons">arrow_right_alt</span>
+            <span>Name: {{ passenger.name }}</span>
+          </p>
+          <p class="departure-arrival-fare-details">
+            <span class="material-icons">arrow_right_alt</span>
+            <span>Gender: {{ passenger.gender }}</span>
+          </p>
+          <p class="departure-arrival-fare-details">
+            <span class="material-icons">arrow_right_alt</span>
+            <span>Age: {{ passenger.age }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

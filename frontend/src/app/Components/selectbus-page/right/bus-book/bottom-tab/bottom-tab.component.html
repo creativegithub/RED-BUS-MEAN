@@ -1,0 +1,27 @@
+<div class="mainBar">
+  <div (click)="handleTabstate(0)">Amenities</div>
+  <div>|</div>
+  <div (click)="handleTabstate(1)">Boarding Droping Points</div>
+  <div>|</div>
+  <div (click)="handleTabstate(2)">Reviews</div>
+  <div>|</div>
+  <div (click)="handleTabstate(3)">Booking Policies</div>
+  <div>|</div>
+  <div (click)="handleTabstate(4)">VIEW SEATS</div>
+</div>
+
+<div class="displayArea" *ngIf="tabstate[0]">Amenities</div>
+<div class="displayArea" *ngIf="tabstate[1]">Boarding Droping Points</div>
+<div class="displayArea" *ngIf="tabstate[2]">Reviews</div>
+<div class="displayArea" *ngIf="tabstate[3]">Booking Policies</div>
+<div class="displayArea" *ngIf="tabstate[4]">
+  <app-view-seats
+    [operatorName]="operatorName"
+    [filledseats]="filledseats"
+    [seatprice]="seatprice"
+    [routedetails]="routedetails"
+    [busId]="busId"
+    [busarrivaltime]="busarrivaltime"
+    [busdeparturetime]="busdeparturetime"
+  ></app-view-seats>
+</div>

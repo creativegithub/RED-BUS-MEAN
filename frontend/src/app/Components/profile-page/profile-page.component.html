@@ -1,0 +1,137 @@
+<div class="profilePannel">
+  <div class="leftPart">
+    <ul class="leftPannel">
+      <li class="leftPannel_eachListItem">
+        <mat-icon
+          style="color: grey; font-size: 30px; height: 100%; width: 100%"
+          >perm_identity</mat-icon
+        >
+        <div class="leftPannel_eachListItem_text">{{ "Dashboard" }}</div>
+      </li>
+      <div class="line"></div>
+      <li
+        class="leftPannel_eachListOption"
+        (click)="handleListitemClick('trips')"
+      >
+        <i class="material-icons" style="color: grey; font-size: 30px"
+          >location_on</i
+        >
+        <div class="leftPannel_eachListItem_text">My Trips</div>
+      </li>
+      <div class="line"></div>
+      <li
+        class="leftPannel_eachListOption"
+        (click)="handleListitemClick('profile')"
+      >
+        <i class="material-icons" style="color: grey; font-size: 30px"
+          >settings</i
+        >
+        <div class="leftPannel_eachListItem_text">My Profile</div>
+      </li>
+      <div class="line"></div>
+      <li
+        class="leftPannel_eachListOption"
+        (click)="handleListitemClick('wallet')"
+      >
+        <i class="material-icons" style="color: grey; font-size: 30px"
+          >account_balance_wallet</i
+        >
+        <div class="leftPannel_eachListItem_text">Wallet</div>
+      </li>
+      <div class="line"></div>
+    </ul>
+  </div>
+  <div class="seprator"></div>
+  <div *ngIf="selectedItems === 'trips'">
+    <app-my-trip [booking]="mytrip"></app-my-trip>
+  </div>
+  <div *ngIf="selectedItems === 'wallet'">Wallet feature coming soon...</div>
+  <div *ngIf="selectedItems === 'profile'" class="rightPannel">
+    <span class="profileHeading">{{ "My Profile" }}</span>
+    <div class="profilebox">
+      <div style="display: flex; justify-content: space-between">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            height: 50px;
+            justify-content: space-evenly;
+          "
+        >
+          <div class="userDetailHeading">Your Name</div>
+          <div class="userDetailInfo">
+            {{ currentCustomer ? currentName : "User" }}
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            height: 50px;
+            justify-content: space-evenly;
+          "
+        >
+          <div class="userDetailHeading">Date of Birth</div>
+          <div class="userDetailInfo">1992-03-04</div>
+        </div>
+      </div>
+      <div
+        style="display: flex; justify-content: space-between; margin-top: 5%"
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            height: 50px;
+            justify-content: space-evenly;
+          "
+        >
+          <div class="userDetailHeading">Gender</div>
+          <div class="userDetailInfo">
+            {{ currentCustomer ? currentCustomerGender : "-" }}
+          </div>
+        </div>
+      </div>
+      <div
+        style="display: flex; justify-content: space-between; margin-top: 5%"
+      >
+        <div class="contactLine"></div>
+        <div class="contactDetailsHeading">Contact Details</div>
+        <div class="contactLine"></div>
+      </div>
+      <div
+        style="display: flex; justify-content: space-between; margin-top: 5%"
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            height: 50px;
+            justify-content: space-evenly;
+          "
+        >
+          <div class="userDetailHeading">Email</div>
+          <div class="userDetailInfo">
+            {{ currentCustomer ? currentEmail : "-" }}
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            height: 50px;
+            justify-content: space-evenly;
+          "
+        >
+          <div class="userDetailHeading">Phone</div>
+          <div class="userDetailInfo">1234567890</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

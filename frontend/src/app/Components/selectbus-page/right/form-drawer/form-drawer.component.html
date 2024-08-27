@@ -1,0 +1,17 @@
+<button class="proceedButton" (click)="drawer.toggle()">Proceed To Book</button>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer position="end" mode="over" class="example-sidenav">
+    <div style="width: 600px">
+      <app-bus-booking-form
+        [operatorName]="operatorName"
+        [selectedseats]="selectedseats"
+        [seatprice]="seatprice"
+        [routedetails]="routedetails"
+        [busId]="busId"
+        [busarrivaltime]="busarrivaltime"
+        [busdeparturetime]="busdeparturetime"
+      ></app-bus-booking-form>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>

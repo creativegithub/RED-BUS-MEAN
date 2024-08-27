@@ -1,0 +1,268 @@
+body {
+  color: #4a4a4a;
+  word-break: break-word;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.payment_fullContainer {
+  margin: 3% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.icons {
+  font-size: 30px;
+}
+
+.payment_fullContainer_leftContainer {
+  width: 55%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment_fullContainer_rightContainer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.12em;
+}
+
+.payment_fullContainer_rightContainer_inputOfferCode {
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 3px 11px 0;
+  padding: 20px 20px;
+  border: none;
+  outline: none;
+}
+
+.payment_fullContainer_rightContainer_infobar {
+  margin-top: 20px;
+  display: flex;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  -moz-box-align: center;
+  align-items: center;
+  width: auto;
+  height: 60px;
+  border: 1px dashed rgb(221, 221, 221);
+  padding: 0 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.payment_fullContainer_leftContainer_paymentInstruments {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.payment__fullContainer_leftContainer_paymentInstrument {
+  padding: 20px 20px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 3px 11px 0;
+  border: none;
+}
+
+.payment_fullContainer_leftContainer_eachPaymentInstruments {
+  padding: 1.3em;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: flex-start;
+}
+
+/* Stripe Payment Start */
+.payment_stripe {
+  margin-top: 50px;
+}
+
+.payment_stripe button {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.payment_stripe_button {
+  background-color: #d84f57;
+  color: white;
+  height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 1s;
+}
+
+.payment_stripe_button:hover{
+  background-color: #b4363e;
+  font-weight: 700;
+}
+
+/* Stripe payment end */
+.payment_main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px !important;
+  min-width: 1200px;
+  box-sizing: border-box;
+}
+
+.payment_header {
+  background-color: #d84f57;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 64px;
+  padding: 0 5%;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffef96;
+}
+
+.payment_icon_img {
+  height: 20px;
+  margin-left: 20px;
+}
+
+.radioButton {
+  z-index: 1;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.radioButtonText {
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1.25;
+  color: rgb(70, 70, 87);
+}
+
+.choose_payment_heading {
+  margin-top: 30px;
+  margin: 2em 0 1em;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.26;
+  color: #3e3e52;
+}
+
+.banner_chip {
+  display: flex;
+  align-items: center;
+}
+
+.banner_text {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: rgb(126, 126, 140);
+}
+
+.UPIPaymentText {
+  margin: 1em 0;
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  color: #747f8d;
+}
+
+.payment_fullContainer_leftContainer_eachPaymentInstruments_new {
+  margin-left: 10px;
+  padding: 5px 5px;
+  border-radius: 2px;
+  background-color: rgb(56, 184, 124);
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.payment_fullContainer_rightContainer_trip_container {
+  padding: 20px 20px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 3px 11px 0;
+  border: none;
+}
+
+.payment_fullContainer_rightContainer_fare_Container {
+  margin: 30px 0;
+  padding: 20px 30px;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 3px 11px 0;
+  padding: 20px 30px;
+  border: none;
+}
+
+.travel_operator_info {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: start;
+  justify-content: flex-start;
+  flex: 1 1 0%;
+}
+
+.travel_title {
+  color: rgb(216, 78, 85);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.38;
+  padding-right: 3%;
+}
+
+.travel_specification {
+  color: rgb(116, 127, 141);
+  font-size: 14px;
+  line-height: 1.33;
+}
+
+.line {
+  margin-bottom: 1em;
+  height: 1em;
+  border-bottom: 0.5px solid rgb(222, 222, 222);
+}
+
+.passengerInfo {
+  display: flex;
+  margin-top: 20px;
+  padding: 1.12em;
+  justify-content: flex-start;
+  background-color: rgb(250, 229, 229);
+  min-height: 1.76em;
+  -moz-box-pack: center;
+}
+
+.passengerName {
+  margin-left: 10px;
+  color: rgb(116, 127, 141);
+  font-size: 14px;
+  line-height: 1.33;
+  font-weight: 400;
+}
+
+.payment_banner_icon_img {
+  height: 25px;
+  margin-left: 20px;
+}
+
+.paymentIconList {
+  display: flex;
+}
+
+.icons {
+  width: auto;
+  height: auto;
+}
